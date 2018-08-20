@@ -56,6 +56,7 @@ public class MiniThumbFile {
     private Uri mUri;
     private RandomAccessFile mMiniThumbFile;
     private FileChannel mChannel;
+    private ByteBuffer mBuffer;
     private ByteBuffer mEmptyBuffer;
     private static final Hashtable<String, MiniThumbFile> sThumbFiles =
         new Hashtable<String, MiniThumbFile>();
@@ -183,8 +184,6 @@ public class MiniThumbFile {
         }
         return mMiniThumbFile;
     }
-
-
 
     private MiniThumbFile(Uri uri) {
         mUri = uri;
